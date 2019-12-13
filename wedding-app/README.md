@@ -1,68 +1,54 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## Title: Wedding App
 
-### `npm start`
+## Description 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Essentially this will be a Zola clone. The homepage will be the guestlist RSVP page with the ability to add more guests via an input. The page will have counters representing who have confirmed, not confirmed and total guests. 
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+There will be 3 options for the guests: 
 
-### `npm test`
+- confirmed (box checked)
+- unconfirmed (box not checked)
+- not coming (box deleted)
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+There will also be a photos tab on the navigation bar. Will use <b>React Router</b> to Link to this page. 
 
-### `npm run build`
+![](./wireframe.jpg)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Will be using a Random Person API ('https://uinames.com/api/')
 
-### `npm run eject`
+This will be used to already have a number of 'guests' already on the page. Will be taking full name data of random people
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![](./apiScreenshot2.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Components
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+So far, these are the components I feel are necessary for this app.
 
-## Learn More
+- totalGuests.js (will have class component)
+- confirmedGuests.js
+- unconfirmedGuests.js
+- addGuest.js
+- randomGuests.js (this will be calling the API)
+- photos.js
+- registry.js
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## MVP 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+MVP for this app:
 
-### Code Splitting
+- functionality of adding to the potential guest list
+- ability to have a checkbox that adds potential guest to confirmed guest
+- have a counter that displays totalGuests
+- have another page that displays images of the couple and maybe a 'how we met' section
+- making the app make the user feel happiness (from the CSS) 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Stretch Goals
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Make a registry page. Was thinking about using a Shopping API to display images of registry-appropriate items
