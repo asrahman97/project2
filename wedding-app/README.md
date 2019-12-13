@@ -31,13 +31,16 @@ This will be used to already have a number of 'guests' already on the page. Will
 
 So far, these are the components I feel are necessary for this app.
 
+
+- header.js
+  - photos.js
+  - registry.js
 - totalGuests.js (will have class component)
 - confirmedGuests.js
 - unconfirmedGuests.js
 - addGuest.js
 - randomGuests.js (this will be calling the API)
-- photos.js
-- registry.js
+
 
 ## MVP 
 
@@ -51,4 +54,4 @@ MVP for this app:
 
 ## Stretch Goals
 
-Make a registry page. Was thinking about using a Shopping API to display images of registry-appropriate items
+Make a registry page. Was thinking about using a Shopping API to render images of registry-appropriate items. Make a local storage of images for the photos/registry.
