@@ -26,6 +26,9 @@ class App extends Component {
 
   }
 
+
+  
+
   totalInvited = () => this.state.guests.length;
 
 

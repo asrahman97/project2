@@ -1,5 +1,5 @@
 import React from 'react';
-// import App from '../App'
+import OneGuest from './oneGuest'
 
 const GuestList = (props) => {
   return ( 
@@ -8,14 +8,9 @@ const GuestList = (props) => {
       
       <ul>
         {props.guests.map((guest, index) => 
-          <li key={index}>
-            <p>{guest.name}</p>
-            <label>
-              <input type='checkbox' checked={guest.confirmed} /> Confirm
-            </label>
-            <button>edit</button>
-            <button>remove</button>
-        </li>
+         
+          <OneGuest key={index} name={guest.name} confirmed={guest.confirmed} />
+          
         )}
       </ul>
 
