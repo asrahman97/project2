@@ -46,27 +46,36 @@ class App extends Component {
           <img src='' alt='img goes here' />
         </div>
 
-        <input type='text' placeholder='Type Invitee Name'>
-        </input>
+        <form>
+          <input type='text' placeholder='Type Invitee Name' />
+          <button type='submit' name='submit' value='submit'>Submit</button>
+        </form>
+        
+        <table className='counter'>
+          <tbody>
+            <tr>
+              <td>Confirmed</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Unconfirmed</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Total</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
+
 
         <div className='votes'>
           Where all the guest divs will stay!
         </div>
 
-        {/* <GuestList /> */}
+        <GuestList guests={this.state.guests}/>
 
-        <ul>
-        {this.state.guests.map((guest, index) => 
-          <li key={index}>
-            <p>{guest.name}</p>
-            <label>
-              <input type='checkbox' checked={guest.confirmed} /> Confirm
-            </label>
-            <button>edit</button>
-            <button>remove</button>
-        </li>
-        )}
-      </ul>
+    
 
 
 

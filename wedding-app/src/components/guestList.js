@@ -6,7 +6,7 @@ const GuestList = (props) => {
     
     <div>    
       
-      {/* <ul>
+      <ul>
         {props.guests.map((guest, index) => 
           <li key={index}>
             <p>{guest.name}</p>
@@ -17,7 +17,7 @@ const GuestList = (props) => {
             <button>remove</button>
         </li>
         )}
-      </ul> */}
+      </ul>
 
 
 
