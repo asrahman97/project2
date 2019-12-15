@@ -1,11 +1,33 @@
 import React, { Component } from 'react';
 import './App.css';
+import GuestList from './components/guestList'
 
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      guests: [
+        {
+          name: 'Ash',
+          confirmed: true
+        },
+
+        {
+          name: 'Sriti',
+          confirmed: false
+        }
+
+      ]
+    }
+
+
+
 
   }
+
+  totalInvited = () => this.state.guests.length;
+
 
 
   render() {
@@ -24,12 +46,27 @@ class App extends Component {
           <img src='' alt='img goes here' />
         </div>
 
-        <input>
+        <input type='text' placeholder='Type Invitee Name'>
         </input>
 
         <div className='votes'>
           Where all the guest divs will stay!
         </div>
+
+        {/* <GuestList /> */}
+
+        <ul>
+        {this.state.guests.map((guest, index) => 
+          <li key={index}>
+            <p>{guest.name}</p>
+            <label>
+              <input type='checkbox' checked={guest.confirmed} /> Confirm
+            </label>
+            <button>edit</button>
+            <button>remove</button>
+        </li>
+        )}
+      </ul>
 
 
 
