@@ -9,7 +9,14 @@ const GuestList = (props) => {
       <ul>
         {props.guests.map((guest, index) => 
          
-          <OneGuest key={index} name={guest.name} confirmed={guest.confirmed} />
+          <OneGuest
+            key={index}
+            name={guest.name}
+            confirmed={guest.confirmed}
+            editing={guest.editing}
+            handleConfirmation={() => props.toggleConfirmation(index)}
+            handleToggleEditing={() => props.toggleEditing(index)}
+          />
           
         )}
       </ul>

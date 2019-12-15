@@ -1,4 +1,5 @@
 import React from 'react';
+import GuestEdit from './guestEdit'
 
 const OneGuest = (props) => {
   return ( 
@@ -7,11 +8,16 @@ const OneGuest = (props) => {
       
        
           <li>
-            <p>{props.name}</p>
+            <GuestEdit editing={props.editing}>{props.name}</GuestEdit>
             <label>
-              <input type='checkbox' checked={props.confirmed} /> Confirm
+              <input
+                type='checkbox'
+                checked={props.confirmed}
+                onChange={props.handleConfirmation}
+              /> 
+              Confirm
             </label>
-            <button>edit</button>
+            <button onClick={props.handleToggleEditing}>edit</button>
             <button>remove</button>
           </li>
        

@@ -10,12 +10,14 @@ class App extends Component {
       guests: [
         {
           name: 'Ash',
-          confirmed: true
+          confirmed: true,
+          editing: false
         },
 
         {
           name: 'Sriti',
-          confirmed: false
+          confirmed: true,
+          editing: true
         }
 
       ]
@@ -27,6 +29,40 @@ class App extends Component {
   }
 
 
+  toggleConfirmation = (indexToChange) => 
+    this.setState({
+      guests: this.state.guests.map((guest, index) => {
+        if (index === indexToChange) {
+          return {
+            ...guest,
+            confirmed: !guest.confirmed
+          }
+        }
+        return guest
+      })
+    })
+  
+  
+  toggleGuestProperty = (property, indexToChange) => 
+    this.setState({
+      guests: this.state.guests.map((guest, index) => {
+        if (index === indexToChange) {
+          return {
+            ...guest,
+          [property]: !guest[property]
+          }
+        }
+        return guest
+      })
+    })
+  
+  
+  toggleConfirmation = (index) =>
+    this.toggleGuestProperty('confirmed', index)
+  
+  toggleEditing = (index) =>
+    this.toggleGuestProperty('editing', index)
+  
   
 
   totalInvited = () => this.state.guests.length;
@@ -76,7 +112,11 @@ class App extends Component {
           Where all the guest divs will stay!
         </div>
 
-        <GuestList guests={this.state.guests}/>
+        <GuestList
+          guests={this.state.guests}
+          toggleConfirmation={this.toggleConfirmation}
+          toggleEditing={this.toggleEditing}
+        />
 
     
 
