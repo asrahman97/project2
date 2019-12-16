@@ -1,9 +1,21 @@
 .App {
   text-align: center;
+  align-items: center;
 }
 
 .header {
   font-size: 30px;
   display: flex;
   justify-content: space-evenly;
+}
+
+table {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+td {
+  padding-left: 20px;
 }
