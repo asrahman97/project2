@@ -8,7 +8,7 @@ const OneGuest = (props) => {
       
        
           <li>
-            <GuestEdit editing={props.editing}>{props.name}</GuestEdit>
+            <GuestEdit editing={props.editing} handleEdits={e => props.setEdit(e.target.value)}>{props.name}</GuestEdit>
             <label>
               <input
                 type='checkbox'
@@ -17,7 +17,7 @@ const OneGuest = (props) => {
               /> 
               Confirm
             </label>
-            <button onClick={props.handleToggleEditing}>edit</button>
+            <button onClick={props.handleToggleEditing}>{props.editing ? 'save' : 'edit'}</button>
             <button>remove</button>
           </li>
        

@@ -4,7 +4,7 @@ const guestEdit = (props) => {
   
   if (props.editing) {
     return (
-      <input type='text' value={props.children} />
+      <input type='text' value={props.children} onChange={props.handleEdits} />
     )
   } else {
     return (

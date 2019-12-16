@@ -64,6 +64,20 @@ class App extends Component {
     this.toggleGuestProperty('editing', index)
   
   
+  
+    setEditWithIndex = (name, indexToChange) => 
+    this.setState({
+      guests: this.state.guests.map((guest, index) => {
+        if (index === indexToChange) {
+          return {
+            ...guest,
+          name
+          }
+        }
+        return guest
+      })
+    })
+  
 
   totalInvited = () => this.state.guests.length;
 
@@ -116,6 +130,7 @@ class App extends Component {
           guests={this.state.guests}
           toggleConfirmation={this.toggleConfirmation}
           toggleEditing={this.toggleEditing}
+          setEditWithIndex={this.setEditWithIndex}
         />
 
     

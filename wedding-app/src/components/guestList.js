@@ -16,6 +16,7 @@ const GuestList = (props) => {
             editing={guest.editing}
             handleConfirmation={() => props.toggleConfirmation(index)}
             handleToggleEditing={() => props.toggleEditing(index)}
+            setEdit={text => props.setEditWithIndex(text, index)}
           />
           
         )}
