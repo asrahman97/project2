@@ -7,6 +7,7 @@ class App extends Component {
     super(props);
 
     this.state = {
+      inputGuest: '',
       guests: [
         {
           name: 'Ash',
@@ -81,6 +82,11 @@ class App extends Component {
 
   totalInvited = () => this.state.guests.length;
 
+  handleNameInput = (e) => 
+    this.setState({
+      inputGuest: e.target.value
+    })
+  
 
 
   render() {
@@ -100,7 +106,7 @@ class App extends Component {
         </div>
 
         <form>
-          <input type='text' placeholder='Type Invitee Name' />
+          <input type='text' placeholder='Type Invitee Name' onChange={this.handleNameInput} value={this.state.inputGuest} />
           <button type='submit' name='submit' value='submit'>Submit</button>
         </form>
         
