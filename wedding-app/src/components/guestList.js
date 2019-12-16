@@ -1,5 +1,6 @@
 import React from 'react';
 import OneGuest from './oneGuest'
+import GhostGuest from './ghostGuest'
 
 const GuestList = (props) => {
   return ( 
@@ -7,6 +8,10 @@ const GuestList = (props) => {
     <div>    
       
       <ul>
+
+        <GhostGuest name={props.ghostGuest} />
+
+
         {props.guests.map((guest, index) => 
          
           <OneGuest

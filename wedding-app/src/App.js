@@ -158,6 +158,7 @@ class App extends Component {
           toggleEditing={this.toggleEditing}
           setEditWithIndex={this.setEditWithIndex}
           removeGuest={this.removeGuest}
+          ghostGuest={this.state.inputGuest}
         />
 
     
