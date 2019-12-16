@@ -66,6 +66,14 @@ class App extends Component {
     this.toggleGuestProperty('editing', index)
   
   
+  removeGuest = (index) => 
+    this.setState({
+      guests: [
+        ...this.state.guests.splice(0, index),
+        ...this.state.guests.splice(index + 1)
+      ]
+    })
+  
   
     setEditWithIndex = (name, indexToChange) => 
     this.setState({
@@ -149,6 +157,7 @@ class App extends Component {
           toggleConfirmation={this.toggleConfirmation}
           toggleEditing={this.toggleEditing}
           setEditWithIndex={this.setEditWithIndex}
+          removeGuest={this.removeGuest}
         />
 
     

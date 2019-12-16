@@ -18,7 +18,7 @@ const OneGuest = (props) => {
               Confirm
             </label>
             <button onClick={props.handleToggleEditing}>{props.editing ? 'save' : 'edit'}</button>
-            <button>remove</button>
+            <button onClick={props.handleRemove}>remove</button>
           </li>
        
 
