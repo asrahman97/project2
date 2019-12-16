@@ -19,6 +19,10 @@ body {
 
 }
 
+.hero {
+  width: 100vw;
+}
+
 .nav-head {
   font-weight: 600;
   text-shadow: -1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple;

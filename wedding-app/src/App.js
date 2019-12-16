@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import hero from './images/hero.jpg'
 import GuestList from './components/guestList'
 import Header from './components/header'
 
@@ -122,7 +123,7 @@ class App extends Component {
         <Header />
 
         <div>
-          <img src='../hero.jpg' alt='img goes here' />
+          <img src={hero} alt='img goes here' className='hero'/>
         </div>
 
         <form onSubmit={this.newGuest}>
