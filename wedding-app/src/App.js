@@ -18,7 +18,7 @@ class App extends Component {
         {
           name: 'Sriti',
           confirmed: true,
-          editing: true
+          editing: false
         }
 
       ]
@@ -87,6 +87,21 @@ class App extends Component {
       inputGuest: e.target.value
     })
   
+  newGuest = (e) => {
+    e.preventDefault();
+      this.setState({
+        guests: [
+          {
+            name: this.state.inputGuest,
+            confirmed: false,
+            editing: false
+          },
+          ...this.state.guests
+        ],
+        inputGuest: ''
+        
+      })
+  }
 
 
   render() {
@@ -105,7 +120,7 @@ class App extends Component {
           <img src='' alt='img goes here' />
         </div>
 
-        <form>
+        <form onSubmit={this.newGuest}>
           <input type='text' placeholder='Type Invitee Name' onChange={this.handleNameInput} value={this.state.inputGuest} />
           <button type='submit' name='submit' value='submit'>Submit</button>
         </form>
