@@ -122,7 +122,7 @@ class App extends Component {
         <Header />
 
         <div>
-          <img src='' alt='img goes here' />
+          <img src='../hero.jpg' alt='img goes here' />
         </div>
 
         <form onSubmit={this.newGuest}>
