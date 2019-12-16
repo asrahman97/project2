@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import GuestList from './components/guestList'
+import Header from './components/header'
 
 class App extends Component {
   constructor(props) {
@@ -110,11 +111,7 @@ class App extends Component {
         July 25, 2020
         #insertCornyHashtagHere
 
-        <nav className='header'>
-          <h3>RSVP</h3>
-          <h3>Photos</h3>
-          <h3>Registry</h3>
-        </nav>
+        <Header />
 
         <div>
           <img src='' alt='img goes here' />

@@ -3,6 +3,10 @@
   align-items: center;
 }
 
+body {
+  background-color: #f0dfdf;
+}
+
 .header {
   font-size: 30px;
   display: flex;
