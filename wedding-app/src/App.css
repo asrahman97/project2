@@ -21,6 +21,7 @@ body {
 
 .hero {
   width: 100vw;
+  margin-bottom: 20px;
 }
 
 .nav-head {
@@ -28,6 +29,10 @@ body {
   /* text-shadow: -1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple; */
   margin: 10px;
   text-shadow: 2px 2px 4px purple;
+}
+
+li {
+  list-style-type: none;
 }
 
 table {
@@ -54,3 +59,10 @@ td {
   background: linear-gradient(#f0dfdf, lightpink, lightpink);
 }
 
+@media (max-width: 600px) {
+  .header {
+    font-size: 2rem;
+    
+  
+  }
+}
