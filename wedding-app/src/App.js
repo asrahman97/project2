@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
+
 import rsz_hero from './images/rsz_hero.jpg'
 import GuestList from './components/guestList'
 import Header from './components/header'
 import Footer from './components/footer'
 import Counter from './components/counter'
+
 import Photos from './components/photos'
+
+
 
 class App extends Component {
   constructor(props) {
@@ -129,7 +133,8 @@ class App extends Component {
         #insertCornyHashtagHere
 
         <Header />
-
+        
+        <div className='testing'>
         <div>
           <img src={rsz_hero} alt='img goes here' className='hero'/>
         </div>
@@ -164,7 +169,7 @@ class App extends Component {
     
         <Footer />
 
-
+      </div>
     </div>
     );
   }
