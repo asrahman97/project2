@@ -25,8 +25,9 @@ body {
 
 .nav-head {
   font-weight: 600;
-  text-shadow: -1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple;
+  /* text-shadow: -1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple; */
   margin: 10px;
+  text-shadow: 2px 2px 4px purple;
 }
 
 table {
@@ -40,6 +41,16 @@ td {
   padding-left: 20px;
 }
 
+.break {
+  margin-bottom: 50px;
+}
 
-
+.footer {
+  position: fixed;
+  height: 40px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(#f0dfdf, lightpink, lightpink);
+}
 

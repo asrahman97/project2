@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import hero from './images/hero.jpg'
+import rsz_hero from './images/rsz_hero.jpg'
 import GuestList from './components/guestList'
 import Header from './components/header'
 import Footer from './components/footer'
@@ -124,7 +124,7 @@ class App extends Component {
         <Header />
 
         <div>
-          <img src={hero} alt='img goes here' className='hero'/>
+          <img src={rsz_hero} alt='img goes here' className='hero'/>
         </div>
 
         <form onSubmit={this.newGuest}>
@@ -162,6 +162,8 @@ class App extends Component {
           removeGuest={this.removeGuest}
           ghostGuest={this.state.inputGuest}
         />
+
+        <div className='break'></div>
 
     
         <Footer />
