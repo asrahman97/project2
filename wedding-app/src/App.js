@@ -92,8 +92,6 @@ class App extends Component {
     })
   
 
-  totalInvited = () => this.state.guests.length;
-
   handleNameInput = (e) => 
     this.setState({
       inputGuest: e.target.value
@@ -115,8 +113,15 @@ class App extends Component {
       })
   }
 
+  totalInvited = () => this.state.guests.length;
+  confirmedGuests = () => this.state.guests.reduce((confirm, guest) => guest.confirmed ? confirm +1: confirm, 0)
 
   render() {
+
+    const total = this.totalInvited();
+    const numberConfirmed = this.confirmedGuests();
+    const numberUnconfirmed = (total - numberConfirmed);
+
     return (
       <div className="App">
         July 25, 2020
@@ -133,22 +138,11 @@ class App extends Component {
           <button type='submit' name='submit' value='submit'>Submit</button>
         </form>
         
-        <table className='counter'>
-          <tbody>
-            <tr>
-              <td>Confirmed</td>
-              <td>2</td>
-            </tr>
-            <tr>
-              <td>Unconfirmed</td>
-              <td>0</td>
-            </tr>
-            <tr>
-              <td>Total</td>
-              <td>2</td>
-            </tr>
-          </tbody>
-        </table>
+        <Counter
+          total={total}
+          numberConfirmed={numberConfirmed}
+          numberUnconfirmed={numberUnconfirmed}
+        />
 
 
         <div className='votes'>
