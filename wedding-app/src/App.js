@@ -4,6 +4,7 @@ import rsz_hero from './images/rsz_hero.jpg'
 import GuestList from './components/guestList'
 import Header from './components/header'
 import Footer from './components/footer'
+import Counter from './components/counter'
 
 class App extends Component {
   constructor(props) {
