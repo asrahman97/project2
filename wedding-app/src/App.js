@@ -3,6 +3,7 @@ import './App.css';
 import hero from './images/hero.jpg'
 import GuestList from './components/guestList'
 import Header from './components/header'
+import Footer from './components/footer'
 
 class App extends Component {
   constructor(props) {
@@ -163,7 +164,7 @@ class App extends Component {
         />
 
     
-
+        <Footer />
 
 
     </div>
