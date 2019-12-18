@@ -86,7 +86,7 @@ td {
   box-shadow:inset 0px 39px 0px -22px #f0dfdf;
 	background-color:lightpink;
 	border-radius:14px;
-	border:2px solid #ffffff;
+	border:2px solid purple;
 	display:inline-block;
 	cursor:pointer;
 	color: purple;
@@ -104,6 +104,10 @@ td {
 
 .counter {
   color: purple;
+}
+
+.guest-div {
+  border-style: ridge;
 }
 
 

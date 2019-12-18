@@ -5,7 +5,7 @@ import GhostGuest from './ghostGuest'
 const GuestList = (props) => {
   return ( 
     
-    <div>    
+    <div className='guest-div'>    
       
       <ul>
 
