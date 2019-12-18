@@ -133,7 +133,7 @@ class Main extends Component {
 
         <form onSubmit={this.newGuest}>
           <input className='field' type='text' placeholder='Type Invitee Name' onChange={this.handleNameInput} value={this.state.inputGuest} />
-          <button type='submit' name='submit' value='submit'>Submit</button>
+          <button className='button' type='submit' name='submit' value='submit'>Submit</button>
         </form>
         
         <Counter

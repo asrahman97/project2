@@ -82,10 +82,38 @@ td {
 }
 
 
+.button {
+  box-shadow:inset 0px 39px 0px -22px #f0dfdf;
+	background-color:lightpink;
+	border-radius:14px;
+	border:2px solid #ffffff;
+	display:inline-block;
+	cursor:pointer;
+	color: purple;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 20px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+
+
+.ghost {
+  color: grey;
+}
+
+.counter {
+  color: purple;
+}
+
+
 @media (max-width: 600px) {
   .header {
     font-size: 2rem;
-    
-  
   }
+
+  .button {
+    width: 300px;
+  }
+
 }
