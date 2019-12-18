@@ -1,6 +1,4 @@
 import React from 'react';
-import OneGuest from './oneGuest'
-import Input from './input'
 
 const GhostGuest = (props) => {
   

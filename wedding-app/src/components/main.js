@@ -1,17 +1,9 @@
 import React, { Component } from 'react';
 import '../App.css';
 
-import rsz_hero from '../images/rsz_hero.jpg'
 import GuestList from './guestList'
-import Header from './header'
 import Footer from './footer'
 import Counter from './counter'
-import HeroPhoto from './heroPhoto'
-
-import Photos from './photos'
-
-import { Route, Link } from 'react-router-dom';
-
 
 
 
@@ -140,7 +132,7 @@ class Main extends Component {
        
 
         <form onSubmit={this.newGuest}>
-          <input type='text' placeholder='Type Invitee Name' onChange={this.handleNameInput} value={this.state.inputGuest} />
+          <input className='field' type='text' placeholder='Type Invitee Name' onChange={this.handleNameInput} value={this.state.inputGuest} />
           <button type='submit' name='submit' value='submit'>Submit</button>
         </form>
         

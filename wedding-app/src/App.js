@@ -9,7 +9,7 @@ import HeroPhoto from './components/heroPhoto'
 
 import Photos from './components/photos'
 
-import { Route, Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 
 
@@ -147,10 +147,9 @@ class App extends Component {
           render={() => <Main />}
         />
         
-
-        {/* <Main /> */}
-
         <div className='break'></div>
+
+      
 
     
         <Footer />

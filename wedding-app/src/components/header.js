@@ -1,8 +1,7 @@
 import React from 'react'
 
-import { Route, Link } from 'react-router-dom';
-import Photos from './photos'
-import HeroPhoto from './heroPhoto';
+import { Link } from 'react-router-dom';
+
 
 
 const Header = () => {
