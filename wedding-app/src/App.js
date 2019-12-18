@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import Main from './components/main'
+
 import rsz_hero from './images/rsz_hero.jpg'
 import GuestList from './components/guestList'
 import Header from './components/header'
 import Footer from './components/footer'
 import Counter from './components/counter'
+import Input from './components/input'
+import HeroPhoto from './components/heroPhoto'
 
 import Photos from './components/photos'
+
+import { Route, Link } from 'react-router-dom';
+
 
 
 
@@ -39,93 +46,93 @@ class App extends Component {
   }
 
 
-  toggleConfirmation = (indexToChange) => 
-    this.setState({
-      guests: this.state.guests.map((guest, index) => {
-        if (index === indexToChange) {
-          return {
-            ...guest,
-            confirmed: !guest.confirmed
-          }
-        }
-        return guest
-      })
-    })
+  // toggleConfirmation = (indexToChange) => 
+  //   this.setState({
+  //     guests: this.state.guests.map((guest, index) => {
+  //       if (index === indexToChange) {
+  //         return {
+  //           ...guest,
+  //           confirmed: !guest.confirmed
+  //         }
+  //       }
+  //       return guest
+  //     })
+  //   })
   
   
-  toggleGuestProperty = (property, indexToChange) => 
-    this.setState({
-      guests: this.state.guests.map((guest, index) => {
-        if (index === indexToChange) {
-          return {
-            ...guest,
-          [property]: !guest[property]
-          }
-        }
-        return guest
-      })
-    })
+  // toggleGuestProperty = (property, indexToChange) => 
+  //   this.setState({
+  //     guests: this.state.guests.map((guest, index) => {
+  //       if (index === indexToChange) {
+  //         return {
+  //           ...guest,
+  //         [property]: !guest[property]
+  //         }
+  //       }
+  //       return guest
+  //     })
+  //   })
   
   
-  toggleConfirmation = (index) =>
-    this.toggleGuestProperty('confirmed', index)
+  // toggleConfirmation = (index) =>
+  //   this.toggleGuestProperty('confirmed', index)
   
-  toggleEditing = (index) =>
-    this.toggleGuestProperty('editing', index)
-  
-  
-  removeGuest = (index) => 
-    this.setState({
-      guests: [
-        ...this.state.guests.splice(0, index),
-        ...this.state.guests.splice(index + 1)
-      ]
-    })
+  // toggleEditing = (index) =>
+  //   this.toggleGuestProperty('editing', index)
   
   
-    setEditWithIndex = (name, indexToChange) => 
-    this.setState({
-      guests: this.state.guests.map((guest, index) => {
-        if (index === indexToChange) {
-          return {
-            ...guest,
-          name
-          }
-        }
-        return guest
-      })
-    })
+  // removeGuest = (index) => 
+  //   this.setState({
+  //     guests: [
+  //       ...this.state.guests.splice(0, index),
+  //       ...this.state.guests.splice(index + 1)
+  //     ]
+  //   })
+  
+  
+  //   setEditWithIndex = (name, indexToChange) => 
+  //   this.setState({
+  //     guests: this.state.guests.map((guest, index) => {
+  //       if (index === indexToChange) {
+  //         return {
+  //           ...guest,
+  //         name
+  //         }
+  //       }
+  //       return guest
+  //     })
+  //   })
   
 
-  handleNameInput = (e) => 
-    this.setState({
-      inputGuest: e.target.value
-    })
+  // handleNameInput = (e) => 
+  //   this.setState({
+  //     inputGuest: e.target.value
+  //   })
   
-  newGuest = (e) => {
-    e.preventDefault();
-      this.setState({
-        guests: [
-          {
-            name: this.state.inputGuest,
-            confirmed: false,
-            editing: false
-          },
-          ...this.state.guests
-        ],
-        inputGuest: ''
+  // newGuest = (e) => {
+  //   e.preventDefault();
+  //     this.setState({
+  //       guests: [
+  //         {
+  //           name: this.state.inputGuest,
+  //           confirmed: false,
+  //           editing: false
+  //         },
+  //         ...this.state.guests
+  //       ],
+  //       inputGuest: ''
         
-      })
-  }
+  //     })
+  // }
 
-  totalInvited = () => this.state.guests.length;
-  confirmedGuests = () => this.state.guests.reduce((confirm, guest) => guest.confirmed ? confirm +1: confirm, 0)
+  // totalInvited = () => this.state.guests.length;
+  // confirmedGuests = () => this.state.guests.reduce((confirm, guest) => guest.confirmed ? confirm +1: confirm, 0)
 
   render() {
 
-    const total = this.totalInvited();
-    const numberConfirmed = this.confirmedGuests();
-    const numberUnconfirmed = (total - numberConfirmed);
+    // const total = this.totalInvited();
+    // const numberConfirmed = this.confirmedGuests();
+    // const numberUnconfirmed = (total - numberConfirmed);
 
     return (
       <div className="App">
@@ -133,36 +140,8 @@ class App extends Component {
         #insertCornyHashtagHere
 
         <Header />
-        
-        <div className='testing'>
-        <div>
-          <img src={rsz_hero} alt='img goes here' className='hero'/>
-        </div>
 
-        <form onSubmit={this.newGuest}>
-          <input type='text' placeholder='Type Invitee Name' onChange={this.handleNameInput} value={this.state.inputGuest} />
-          <button type='submit' name='submit' value='submit'>Submit</button>
-        </form>
-        
-        <Counter
-          total={total}
-          numberConfirmed={numberConfirmed}
-          numberUnconfirmed={numberUnconfirmed}
-        />
-
-
-        <div className='votes'>
-          Where all the guest divs will stay!
-        </div>
-
-        <GuestList
-          guests={this.state.guests}
-          toggleConfirmation={this.toggleConfirmation}
-          toggleEditing={this.toggleEditing}
-          setEditWithIndex={this.setEditWithIndex}
-          removeGuest={this.removeGuest}
-          ghostGuest={this.state.inputGuest}
-        />
+        <Main />
 
         <div className='break'></div>
 
@@ -170,7 +149,7 @@ class App extends Component {
         <Footer />
 
       </div>
-    </div>
+    
     );
   }
 }

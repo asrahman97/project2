@@ -29,6 +29,14 @@ body {
   /* text-shadow: -1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple; */
   margin: 10px;
   text-shadow: 2px 2px 4px purple;
+  text-decoration: none;
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+
 }
 
 li {
