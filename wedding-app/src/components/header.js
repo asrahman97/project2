@@ -18,9 +18,9 @@ const Header = () => {
       
       {/* <Route
         path='/photos' component={Photos} /> */}
-      
-      {/* <Route
-        path='./main' component={HeroPhoto} /> */}
+{/*       
+      <Route
+        path='./main' component={Main} /> */}
       
 
 

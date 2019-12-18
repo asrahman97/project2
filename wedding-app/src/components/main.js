@@ -135,9 +135,9 @@ class Main extends Component {
       <div className="App">
       
 
-      
+     
         
-        <HeroPhoto />
+       
 
         <form onSubmit={this.newGuest}>
           <input type='text' placeholder='Type Invitee Name' onChange={this.handleNameInput} value={this.state.inputGuest} />
@@ -150,8 +150,7 @@ class Main extends Component {
           numberUnconfirmed={numberUnconfirmed}
         />
 
-<Route
-        path='/photos' component={Photos} />
+
 
 
         <GuestList

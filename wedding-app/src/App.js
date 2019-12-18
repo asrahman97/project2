@@ -3,12 +3,8 @@ import './App.css';
 
 import Main from './components/main'
 
-import rsz_hero from './images/rsz_hero.jpg'
-import GuestList from './components/guestList'
 import Header from './components/header'
 import Footer from './components/footer'
-import Counter from './components/counter'
-import Input from './components/input'
 import HeroPhoto from './components/heroPhoto'
 
 import Photos from './components/photos'
@@ -141,7 +137,18 @@ class App extends Component {
 
         <Header />
 
-        <Main />
+        <Route
+        path='/photos' component={Photos} />
+
+        <HeroPhoto />
+
+        <Route
+          path='/main'
+          render={() => <Main />}
+        />
+        
+
+        {/* <Main /> */}
 
         <div className='break'></div>
 
