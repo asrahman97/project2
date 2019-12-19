@@ -29,9 +29,7 @@ const Photos = () => {
       <img src={photos9} alt='img goes here' className='photo'/>
       <img src={photos10} alt='img goes here' className='photo'/>
       <img src={photos11} alt='img goes here' className='photo'/>
-      {/* <img src='' alt='img goes here' />
-      <img src='' alt='img goes here' />
-      <img src='' alt='img goes here' /> */}
+     
     </div>
   )
 }
