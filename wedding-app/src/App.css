@@ -191,6 +191,16 @@ td {
     flex-direction: column;
   }
 
+  .reg-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reg-grid {
+    margin: auto 0;
+  }
+
 }
 
 

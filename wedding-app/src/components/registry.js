@@ -11,11 +11,9 @@ class Registry extends Component {
   render() {
     return (
       <div className="reg-card">
-        <RegistryItems body="testing passing props" />
 
-        <RegistryItems body="testing passing props" />
+        <RegistryItems />
 
-        <RegistryItems body="testing passing props" />
       </div>
     );
   }
