@@ -13,13 +13,6 @@ const Header = () => {
         
           <h3 className='nav-head'>Registry</h3>
       </nav>
-  
-      
-      {/* <Route
-        path='/photos' component={Photos} /> */}
-{/*       
-      <Route
-        path='./main' component={Main} /> */}
       
 
 
