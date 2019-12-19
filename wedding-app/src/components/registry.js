@@ -1,11 +1,34 @@
-import React from 'react';
+import React, { Component } from 'react';
+import RegistryItems from './registryItems'
 
-const Registry = () => {
-  return (
-    <div>this is the registry</div>
-  )
+
+class Registry extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+    
+    }
+  }
+
+
+  render() {
+    return (
+      <div>
+      
+      
+        <RegistryItems
+        />
+  
+  
+  
+  
+  
+    </div>
+    )
+  }
+
 }
-
 
 
 
