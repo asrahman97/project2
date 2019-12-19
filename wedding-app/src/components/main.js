@@ -167,8 +167,6 @@ class Main extends Component {
         />
 
         <div className="break"></div>
-
-        <Footer />
       </div>
     );
   }
