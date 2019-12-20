@@ -43,7 +43,7 @@ body {
   font-weight: 600;
   /* text-shadow: -1px 0 purple, 0 1px purple, 1px 0 purple, 0 -1px purple; */
   margin: 10px;
-  text-shadow: 2px 2px 4px purple;
+  text-shadow: 2px 2px 4px #440646;
   text-decoration: none;
 
 }
@@ -126,7 +126,7 @@ td {
 }
 
 .counter {
-  color: purple;
+  color: #440646;
 }
 
 .guest-div {
