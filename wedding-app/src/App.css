@@ -195,6 +195,10 @@ td {
   text-align: left;
 }
 
+.body-text {
+  padding: 0px 15px;
+}
+
 
 @media (max-width: 600px) {
   .header {

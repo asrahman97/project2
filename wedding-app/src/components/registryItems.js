@@ -18,28 +18,28 @@ const RegistryItems = props => {
         <h2>{Title[0]}</h2>
         <img src={Image[0]} alt="gift" className="reg-image" />
         <p>{Price[0]}</p>
-        <p>{Body[0]}</p>
+        <p className='body-text'>{Body[0]}</p>
       </div>
 
       <div className="reg-grid">
         <h2>{Title[1]}</h2>
         <img src={Image[1]} alt="gift" className="reg-image" />
         <p>{Price[1]}</p>
-        <p>{Body[1]}</p>
+        <p className='body-text'>{Body[1]}</p>
       </div>
 
       <div className="reg-grid">
         <h2>{Title[2]}</h2>
         <img src={Image[2]} alt="gift" className="reg-image" />
         <p>{Price[2]}</p>
-        <p>{Body[2]}</p>
+        <p className='body-text'>{Body[2]}</p>
       </div>
 
       <div className="reg-grid">
         <h2>{Title[3]}</h2>
         <img src={Image[3]} alt="gift" className="reg-image" />
         <p>{Price[3]}</p>
-        <p>{Body[3]}</p>
+        <p className='body-text'>{Body[3]}</p>
       </div>
 
 
