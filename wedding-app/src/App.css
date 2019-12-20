@@ -13,6 +13,15 @@ body {
 
 }
 
+.above-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  color: #440646
+  /* text-align: left;
+  align-items: left; */
+}
+
 .header {
   font-size: 50px;
   display: flex;

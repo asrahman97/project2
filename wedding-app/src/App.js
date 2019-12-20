@@ -37,7 +37,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        July 25, 2020 #insertCornyHashtagHere
+        <div className='above-header'>
+          
+            <p>July 25, 2020</p>
+            <p>#insertCornyHashtagHere</p>
+        
+        </div>
         <Header />
         <Route path="/photos" component={Photos} />
         <Route path="/registry" render={() => <Registry />} />
