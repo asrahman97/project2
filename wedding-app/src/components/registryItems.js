@@ -35,6 +35,13 @@ const RegistryItems = props => {
         <p>{Body[2]}</p>
       </div>
 
+      <div className="reg-grid">
+        <h2>{Title[3]}</h2>
+        <img src={Image[3]} alt="gift" className="reg-image" />
+        <p>{Price[3]}</p>
+        <p>{Body[3]}</p>
+      </div>
+
 
     </div>
   );
