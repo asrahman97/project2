@@ -14,9 +14,19 @@ import photos11 from "../images/photos11.jpg";
 
 const Photos = () => {
   return (
-    <div className='photo-page'>
-      <h1>How we Met</h1>
-      <h5>this is how we met and shit</h5>
+    <div className="photo-page">
+      <h1 className='hwm'>How we Met</h1>
+      <div className='how-we-met'>
+        <h5>
+          With our parents being friends, we would see other at family events
+          for years since we were in high school. Never did we imagine back then
+          we would be at this moment right now. We’ve gone years without seeing
+          each other but reconnected at a sweet sixteen. There, we realised we
+          had much more in common than we thought growing up. From there, I knew
+          I had to get to know her more. Fast forward all this time now, and
+          we’re getting married! <br /><br />TDLR: she got out the friendzone lol
+        </h5>
+      </div>
       <div className="photo-grid">
         <img src={photos0} alt="img goes here" className="photo" />
         <img src={photos1} alt="img goes here" className="photo" />

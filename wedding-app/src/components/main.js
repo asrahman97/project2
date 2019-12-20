@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "../App.css";
 
 import GuestList from "./guestList";
-import Footer from "./footer";
 import Counter from "./counter";
 import { apiCall } from "./randomGuests";
 

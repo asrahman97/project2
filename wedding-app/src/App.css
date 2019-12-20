@@ -175,6 +175,17 @@ td {
       transform: scale(1.1);
 }
 
+.hwm {
+  color: #440646;
+}
+
+.how-we-met {
+  width: 600px;
+  margin: 0 auto;
+  color: #440646;
+  text-align: left;
+}
+
 
 @media (max-width: 600px) {
   .header {
@@ -199,6 +210,10 @@ td {
 
   .reg-grid {
     margin: auto 0;
+  }
+
+  .how-we-met {
+    width: 450px;
   }
 
 }
