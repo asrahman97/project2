@@ -107,10 +107,8 @@ class Main extends Component {
 
   componentDidMount = async () => {
     const allGuests = this.state.guests;
-    console.log(allGuests);
 
     const results = await apiCall();
-    console.log(results.data[0].name);
 
     let tempObj = {
       name: results.data[0].name,
@@ -125,7 +123,6 @@ class Main extends Component {
     };
 
     allGuests.push(tempObj, tempObj2);
-    console.log(allGuests);
 
     this.setState({ allGuests });
   };
